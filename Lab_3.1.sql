@@ -33,7 +33,9 @@ WHERE LEFT(p.payment_date,7)='2005-08';
 
 SELECT first_name,last_name,staff_id,SUM(amount)
 FROM staff_pay_amounts
-GROUP BY staff_id;
+GROUP BY staff_id,first_name,last_name;
+
+
 
 -- 4. List all films and the number of actors who are listed for each film.
 create temporary table if not exists actors_per_film
